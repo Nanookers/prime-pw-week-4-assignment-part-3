@@ -7,6 +7,7 @@ console.log(basket);
 
 
 console.log(`<______Add Items Starts Here_______>`);
+// Add Items follows after this
 function addItem( food ){
     basket.push( food );
     console.log(`Adding item:`, food);
@@ -39,11 +40,12 @@ listItems(basket);
 
 
 console.log(`<______Empty Cart Moved to the End_______>`);
-
+//moved to the end for simplicity
 
 
 
 console.log(`<______is full Starts Here_______>`);
+//is full follows after this
 function isFull( basket, maxBasket ) {
     for( i=0; i < basket.length; i++){
         if( basket.length >= maxBasket){
@@ -60,7 +62,7 @@ console.log(`expecting false:`, isFull( basket, maxItems));
 console.log(`expect true:`, addItem(`ice`));
 console.log(listItems(basket));
 
-/*          Struggled to 
+/*          Struggled to solve this second part, adding it to the add item function
 console.log(`<______is full w/ add item_______>`);
 function addItemsTwo( basket ) {
     for( i=0; i < basket.length; i++){
@@ -78,12 +80,13 @@ console.log(addItemsTwo( `Good Food `));
  */
 
 console.log(`<______Remove Items Starts Here_______>`);
+//remove item follows after here
 
 function removeItem( items, num0 ){
     for( i=0; i<items.length; i--){
     if( items.indexOf(num0) ){ 
         items.splice(num0,1)
-        return num0;
+        return num0; //had difficulty getting it to post actual string
     }
     else{
         return `null`;

@@ -25,11 +25,11 @@ Update the `cart.js` file to do the following:
   - return `true` indicating the item was added    //yes
 
 - Create a function called `listItems`. It should:    //yes
-  - loop over the items in the `basket` array     //kind of
-  - console.log each individual item on a new line    //not posting on individual lines
+  - loop over the items in the `basket` array     //yes
+  - console.log each individual item on a new line    //yes
 
 - Create a function called `empty`. It should:
-  - reset the `basket` to an empty array
+  - reset the `basket` to an empty array //yes
 
 > __IMPORTANT__
 > Make sure that you are writing code *in the file* to test every function that you write!
@@ -46,7 +46,7 @@ Remember that Stretch Goals are not required, but will help you to further devel
 
 __Using functions in other functions!__
 
-1. Add a global `const` named `maxItems` and set it to 5.
+1. Add a global `const` named `maxItems` and set it to 5. yes
 
 2. Create a function called isFull(). It should:
   - return `false` if the basket contains *less* than max number of items

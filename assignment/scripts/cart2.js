@@ -15,9 +15,11 @@ function addItem( food ){
 console.log(`expect true:`, addItem(`pie`)); //returns true to show that process happenened.
 console.log(`expect true:`, addItem(`meat`));
 console.log(`expect true:`, addItem(`veggies`));
-console.log(`expect true:`, addItem(`fruit`));
+
 
 console.log(`Basket is: ${basket}`);
+
+
 
 
 
@@ -30,7 +32,14 @@ function listItems( basket ){
     }
     return basket; 
 }
-console.log( listItems( basket ));
+console.log(`These Items are:`);
+listItems(basket);
+
+
+
+
+console.log(`<______Empty Cart Moved to the End_______>`);
+
 
 
 
@@ -47,21 +56,50 @@ function isFull( basket, maxBasket ) {
         }
     }
 }
-console.log(isFull( basket, maxItems));
+console.log(`expecting false:`, isFull( basket, maxItems));
 console.log(`expect true:`, addItem(`ice`));
 console.log(listItems(basket));
 
+/*          Struggled to 
+console.log(`<______is full w/ add item_______>`);
+function addItemsTwo( basket ) {
+    for( i=0; i < basket.length; i++){
+        if( basket.length < maxItems ){
+        basket.push( basket );
+        console.log(`Adding item:`, basket);
+        return true;
+        }
+        else if( basket.length = maxItems )
+        return false;
+    }
+}
+
+console.log(addItemsTwo( `Good Food `));
+ */
 
 console.log(`<______Remove Items Starts Here_______>`);
 
 function removeItem( items, num0 ){
     for( i=0; i<items.length; i--){
-    items.indexOf(num0)
-    items.splice(num0,1)
-    return items;
+    if( items.indexOf(num0) ){ 
+        items.splice(num0,1)
+        return num0;
     }
-    
-    
+    else{
+        return `null`;
+    }
+  }
 }
-console.log(removeItem(basket,1));
-console.log(basket);
+console.log(removeItem(basket, 2));
+console.log(`Basket is Now ${basket}`);
+
+
+
+//Empty Basket follows after this
+console.log(`<______Empty Cart Starts Here_______>`);
+function empty(items){
+    items.splice(0);
+    return items;
+}
+console.log(`expecting empty`, empty(basket));
+console.log(`Basket is now empty: ${basket}`) 
